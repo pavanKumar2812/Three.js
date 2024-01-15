@@ -3,15 +3,14 @@
 Welcome to the Three.js Showcase Repository, where a collection of captivating projects utilizing the power of Three.js is curated for your exploration and enjoyment! 🌐✨
 
 ## Projects Overview 🎮📏🗣️🦑
-
 ### 1. SmallGameEnemyFollowThePlayer 🎮
 
 Dive into a mini-adventure where the player cube (yellow) maneuvers through a dynamic environment, skillfully avoiding an enemy cube (grey) that cunningly follows its every move. Control your destiny with arrow keys and experience the magic of raycasting for AI-like behavior.
 
 #### Installation
-    1. Clone the repository
-    2. Open the project directory (SmallGameEnemyFollowThePlayer)
-    3. Run the application: Launch "index.html" with a live server.
+1. Clone the repository
+2. Open the project directory (SmallGameEnemyFollowThePlayer)
+3. Run the application: Launch "index.html" with a live server.
 ```bash
 git clone "https://github.com/pavanKumar2812/Three.js.git"
 ```
@@ -27,11 +26,11 @@ git clone "https://github.com/pavanKumar2812/Three.js.git"
 Explore the depths of spatial computation with Three.js as it calculates the distance between two 3D objects. This repository demonstrates the art of creating bounding boxes, setting target points, and dynamically updating positions for accurate distance measurements.
 
 #### Approch to the Objective
-    1. Create Bounding Box for Cube: Facilitate distance calculations with a bounding box.
-    2. Set Target Point as Ball Position: Define the target point using the ball object's    position.
-    3. Update Position of the Bounding Box: Dynamically adjust the box position based on cube or sphere movement.
-    4. Measure Distance: Utilize the distanceToPoint function to compute the distance.
-    Update Display with Distance: Showcase the calculated distance for reference.
+1. Create Bounding Box for Cube: Facilitate distance calculations with a bounding box.
+2. Set Target Point as Ball Position: Define the target point using the ball object's    position.
+3. Update Position of the Bounding Box: Dynamically adjust the box position based on cube or sphere movement.
+4. Measure Distance: Utilize the distanceToPoint function to compute the distance.
+5. Update Display with Distance: Showcase the calculated distance for reference.
 
 [📏 Explore Now](https://github.com/pavanKumar2812/Three.js.git)
 
@@ -55,18 +54,18 @@ Step into the recreation of Squid Game's iconic Green Light, Red Light challenge
 
 ## How to Explore 🌐🚀
 
-    1. Clone the Repository:
+1. Clone the Repository:
 ```bash
 git clone https://github.com/pavankumar2812/Three.js-Showcase.git
 ```
-    2. Navigate to Project:
-        * Open the desired project directory.
-    3. Run the Application:
-        * Launch the "index.html" file with a live server.
-    4. Contribute and Enjoy!
+2. Navigate to Project:
+    * Open the desired project directory.
+3. Run the Application:
+    * Launch the "index.html" file with a live server.
+4. Contribute and Enjoy!
 
-        * Feel free to contribute, report issues, or suggest improvements for each project.
-
+    * Feel free to contribute, report issues, or suggest improvements for each project.
+  
 ## License 📜
 
-This project is licensed under the Apache License. Feel free to explore, contribute, and enhance these projects! Let the Three.js adventures continue! 🚀👨‍💻
+This project is licensed under the Apache License. Feel free to explore, contribute, and enhance these projects! Let the Three.js adventures continue! 🚀👨‍💻🌟

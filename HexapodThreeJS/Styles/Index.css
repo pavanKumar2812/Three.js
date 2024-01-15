@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital@1&display=swap');
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Create space between the main content and the sidebar */
+    background-color: #17212b;
+}
+#Sidebar {
+    width: 30%; /* Adjust the width of the sidebar as needed */
+    padding: 20px; /* Add some padding to the sidebar */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.OuterContainer 
+{
+    flex-grow: 1; /* Allow the main content to grow and take remaining space */
+    margin-top: 50px;
+    border: 1px solid #2980b9;
+    border-radius: 15px;
+    height: 520px;
+}
+
+.border 
+{
+    margin: 2pxpx;
+    padding: 5px;
+    border: 1px solid var(--c4-blue);
+    border-radius: 10px;
+}
+
+h1
+{
+    /* font-family: 'Playfair Display', serif; */
+    font-family: 'Caveat', cursive;
+    color: #ffa500;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 45px;
+}
+
+h3 
+{
+    font-family: 'Playfair Display', serif;
+    color: #32ff7e;
+    margin-left: 15px;
+}
+
+.Alpha,
+.Beta,
+.Gamma,
+.GridCols3,
+.GridCols2
+{
+    color: #32ff7e;
+}
+
+.InverseKinematics
+{
+  margin-top: 15px;
+}
+
+/********************
+  Slider
+ ********************/
+
+#Slider 
+{
+    background: orange;
+    -webkit-appearance: none;
+    height: 4px;
+    border: 0px;
+    border-radius: 5px;
+    outline: none;
+    margin: 6px;
+    width: 100%;
+}
+
+#Slider:hover,
+#Slider:active 
+{
+    background: #00FFFF;
+    height: 8px;
+    margin: 4px;
+}
+
+#Slider::-webkit-Slider-thumb 
+{
+    background: #32ff7e;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+}
+
+#Slider::-moz-range-thumb 
+{
+    background: var(--c1-green);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+}
+
+.SliderContainer
+{
+  margin: 5px;
+}
+
+/* Small sliders */
+.InverseKinematics 
+{
+  display: flex;
+  flex-direction: row;
+}
+
+/* .GridCols3
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+} */
+
+.SmallSlider
+{
+    background: orange;
+    -webkit-appearance: none;
+    height: 4px;
+    border: 0px;
+    border-radius: 5px;
+    outline: none;
+    margin: 6px;
+}
+
+.SmallSlider:hover,
+.SmallSlider:active 
+{
+    background: #00FFFF;
+    height: 8px;
+    margin: 4px;
+}
+
+.SmallSlider::-webkit-Slider-thumb 
+{
+    background: #32ff7e;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+}
+
+.SmallSlider::-moz-range-thumb 
+{
+    background: var(--c1-green);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+}
+
+/********************
+  Toggle
+ ********************/
+
+.toggle-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.toggle-label1
+{
+    font-family: 'Caveat', cursive;
+    color: orange;
+    font-size: 20px;
+}
+.toggle-label2
+{
+    font-family: 'Caveat', cursive;
+    color: #32ff7e;
+    font-size: 20px;
+}
+.switch 
+{
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input 
+{ 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider 
+{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: orange;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before 
+{
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider 
+{
+  background-color: #32ff7e;
+}
+
+input:focus + .slider 
+{
+  box-shadow: 0 0 1px #00FFFF;
+}
+
+input:checked + .slider:before 
+{
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round 
+{
+  border-radius: 34px;
+}
+
+.slider.round:before 
+{
+  border-radius: 50%;
+}
+
+.button 
+{
+  font-family: Consolas,Monaco,Menlo,Courier,monospace;
+  border: none;
+  font-size: .6rem;
+  font-weight: 700;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: red;
+  margin-top: 10px;
+  margin-left: 10px;
+}

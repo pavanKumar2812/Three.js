@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hexapod Simulator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/Index.css">
+    <script type="module" src="./Scripts/jquery.min.js"></script>   
+    <script type="module" src="./Scripts/Common.js"></script> 
+    <script type="module" src="./Scripts/Main.js"></script>
+</head>
+
+<body>
+    <div id="Sidebar">
+        <h1>Hexapod Simulator</h1>
+
+        <div class="toggle-container">
+            <span class="toggle-label1">Inverse Kinematics</span>
+            <div class="toggle-switch-container">
+              <label class="switch">
+                <input type="checkbox" id="toggle-button" checked >
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <span class="toggle-label2">Leg Control</span>
+         </div>
+
+        <div class="LegPatterns">
+            <h3>Leg Patterns</h3>
+            <div class="Alpha">
+                <label>alpha:  </label>
+                <span>0</span>
+                <input type="range" min="1" max="100" value="25" id="Slider" class="AlphaSlider" >    
+            </div>
+            <div class="Beta">
+                <label>beta:  </label>
+                <span>0</span>
+                <input type="range" min="1" max="100" value="25" id="Slider" class="BetaSlider" >   
+            </div>
+            <div class="Gamma">
+                <label>gamma:  </label>
+                <span>0</span>
+                <input type="range" min="1" max="100" value="25" id="Slider" class="GammaSlider" >   
+            </div>
+        </div>
+
+        <div class="InverseKinematics">
+            <div class="GridCols3">
+                <div class="SliderContainer">
+                    <label>tx:  </label>
+                    <span>0</span>
+                    <input type="range" min="-30" max="30" value="15" id="tx" class="SmallSlider">   
+                </div>
+                <div class="SliderContainer">
+                    <label>ty:  </label>
+                    <span>0</span>
+                    <input type="range" min="-30" max="30" value="15" id="ty" class="SmallSlider">   
+                </div>
+                <div class="SliderContainer">
+                    <label>tz:  </label>
+                    <span>0</span>
+                    <input type="range" min="-30" max="30" value="15" id="tz" class="SmallSlider">   
+                </div>
+                <div class="SliderContainer">
+                    <label>rx:  </label>
+                    <span>0</span>
+                    <input type="range" min="-30" max="30" value="15" id="rx" class="SmallSlider">   
+                </div>
+                <div class="SliderContainer">
+                    <label>ry:  </label>
+                    <span>0</span>
+                    <input type="range" min="-30" max="30" value="15" id="ry" class="SmallSlider">   
+                </div>
+                <div class="SliderContainer">
+                    <label>rz:  </label>
+                    <span>0</span>
+                    <input type="range" min="-30" max="30" value="15" id="rz" class="SmallSlider">   
+                </div>
+            </div>
+            <div class="GridCols2">
+                <div class="hipStance">
+                    <label>hipStance:  </label>
+                    <span>0</span>
+                    <input type="range" min="1" max="100" value="25" id="Slider" style="width: 80%;">   
+                </div>
+                <div class="legStance">
+                    <label>legStance:  </label>
+                    <span>0</span>
+                    <input type="range" min="1" max="100" value="25" id="Slider" style="width: 80%;">   
+                </div>
+            </div>
+        </div>
+        <button type="button" class="button">reset</button>
+    </div>
+
+    <div class="OuterContainer" id="border-line">
+        <div id="Container" class="border" style="height: 100%;width: 100%;">
+        </div>
+    </div>
+</body>
+</html>

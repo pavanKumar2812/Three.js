@@ -5,7 +5,7 @@ Welcome to the Three.js Showcase Repository, where a collection of captivating p
 ## Projects Overview 🎮📏🗣️🦑
 ### 1. SmallGameEnemyFollowThePlayer 🎮
 #### Overview 👀
-Dive into a mini-adventure where the player cube (yellow) maneuvers through a dynamic environment, skillfully avoiding an enemy cube (grey) that cunningly follows its every move. Control your destiny with arrow keys and experience the magic of raycasting for AI-like behavior.
+Enter a mini-adventure where the yellow player cube must navigate across a changing environment while avoiding the gray opponent cube that follows it around cleverly. Use the arrow keys to control your course and discover the raycasting magic for AI-like behavior.
 
 #### How to Run 🏃‍♂️
 1. Clone the repository

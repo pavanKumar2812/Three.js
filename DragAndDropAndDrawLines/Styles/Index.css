@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Create space between the main content and the sidebar */
+    background-color: #17212b;
+}
+
+p 
+{
+    color: whitesmoke;
+    margin-left: 10px;
+}
+
+.OuterContainer 
+{
+    flex-grow: 1; /* Allow the main content to grow and take remaining space */
+    margin-top: 50px;
+    margin-left: 30px;
+    border: 1px solid #2980b9;
+    border-radius: 15px;
+    height: 520px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+

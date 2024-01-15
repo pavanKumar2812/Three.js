@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Draw Line</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/Index.css">
+    <script type="module" src="./Scripts/jquery.min.js"></script>
+    <script type="module" src="./Scripts/Main.js"></script>
+</head>
+
+<body>
+    <div class="Main-Container">
+        <p><b>ThreeJS Studio</b>
+            <label><input type="radio" name="action" id="MouseRotate">Rotate</label>
+            <label><input type="radio" name="action" id="MouseDrag">Drag</label>
+            <label><input type="radio" name="action" id="MouseAdd">Add</label>
+            <label><input type="radio" name="action" id="MouseDelete">Delete</label>
+            <label><input type="radio" name="action" id="MouseDrawLine">DrawLine</label>
+        </p>
+        <div class="OuterContainer" id="border-line">
+            <div id="canvas-holder">
+                <canvas id="maincanvas" width="900" height="500"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

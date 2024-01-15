@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmallGameEnemyFollowThePlayerByRaycasting</title>
+    <link rel="stylesheet" href="./Index.css">
+</head>
+<body>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "../build/three.module.js",
+                "three/addons/": "./jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="../build/three.module.js"></script>
+    <script type="module" src="./jsm/loaders/GLTFLoader.js"></script>
+    <script type="module" src="./Index.js"></script>
+    <script>
+         let gltfLoaderReady = false;
+
+        // Event listener for GLTFLoader ready
+        document.addEventListener('GLTFLoaderReady', function () {
+            gltfLoaderReady = true;
+        });
+
+        // Key Controls
+        document.onkeydown = function (e) {
+            if (e.keyCode === 37 && gltfLoaderReady) {
+                handleKeyDownEvent(e, cube2);
+            }
+        };
+    </script>
+</body>
+</html>

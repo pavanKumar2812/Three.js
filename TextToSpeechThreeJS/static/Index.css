@@ -1,0 +1,36 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    overflow: hidden;
+}
+
+#question
+{
+    margin-top: 50px;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    color: #0f0000;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-shadow: 
+        1px 1px 1px #919191, /* Shadow just below the text*/
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+    1px 18px 6px rgb(16,16,16, 0.4) /* black shadow*/
+    1px 22px 10px rgb(16, 16, 16, 0.2),
+    1px 25px 35px rgb(16, 16, 16, 0.2),
+    1px 30px 60px rgb(16, 16, 16, 0.4);
+
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Boiler Plate Without NPM</title>
+    <style>
+        body { margin: 0; }
+    </style>
+    <script type="module" >
+        import * as THREE from "./js/three.module.js"
+        import { OrbitControls } from "./js/OrbitControls.js"
+
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const scene = new THREE.Scene();
+
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        const controls = new OrbitControls(camera, renderer.domElement)
+        controls.target.set(8, 0, 0)
+
+        camera.position.z = 5;
+        camera.position.y = 2;
+        camera.position.x = 0;
+
+        camera.position.set(0, 2, 5);
+
+        // Function to create a sphere with given color and position
+        function createSphere(color, x, y, z) {
+            const sphereGeometry = new THREE.SphereGeometry(0.02, 32, 32); // Adjust the size of the spheres as needed
+            const sphereMaterial = new THREE.MeshBasicMaterial({ color });
+            const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+            sphere.position.set(x, y, z);
+            scene.add(sphere);
+        }
+
+        // Generate random values for the rectangle parameters within a certain range
+        const minStartX = -5;
+        const maxStartX = -1;
+        const startX = Math.random() * (maxStartX - minStartX) + minStartX;
+
+        const minStartZ = -5;
+        const maxStartZ = -1;
+        const startZ = Math.random() * (maxStartZ - minStartZ) + minStartZ;
+
+        const minEndX = 1;
+        const maxEndX = 5;
+        const endX = Math.random() * (maxEndX - minEndX) + minEndX;
+
+        const minEndZ = 1;
+        const maxEndZ = 5;
+        const endZ = Math.random() * (maxEndZ - minEndZ) + minEndZ;
+
+        const minSpacing = 0.1;
+        const maxSpacing = 0.5;
+        const spacing = Math.random() * (maxSpacing - minSpacing) + minSpacing;
+
+        // Top side of the rectangle with random variations
+        for (let x = startX; x <= endX; x += spacing) {
+        const xOffset = Math.random() * 0.1 - 0.05; // Random offset between -0.05 and 0.05
+        createSphere(0xffffff, x + xOffset, 0, startZ);
+
+        const zOffset = Math.random() * 0.1 - 0.05; // Random offset between -0.05 and 0.05
+        createSphere(0xffffff, x + xOffset, 0, endZ + zOffset);
+        }
+
+        // Left side of the rectangle with random variations
+        for (let z = startZ + spacing; z <= endZ - spacing; z += spacing) {
+        const zOffset = Math.random() * 0.1 - 0.05; // Random offset between -0.05 and 0.05
+        createSphere(0xffffff, startX, 0, z + zOffset);
+        }
+
+        // Right side of the rectangle with random variations
+        for (let z = startZ + spacing; z <= endZ - spacing; z += spacing) {
+        const zOffset = Math.random() * 0.1 - 0.05; // Random offset between -0.05 and 0.05
+        createSphere(0xffffff, endX, 0, z + zOffset);
+        }
+
+        // Calculate the center point of the rectangle
+        const centerX = (startX + endX) / 2;
+        const centerZ = (startZ + endZ) / 2;
+
+        // Create a sphere at the center point
+        const centerSphereGeometry = new THREE.SphereGeometry(0.05, 32, 32);
+        const centerSphereMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+        const centerSphere = new THREE.Mesh(centerSphereGeometry, centerSphereMaterial);
+        centerSphere.position.set(centerX, 0, centerZ);
+        scene.add(centerSphere);
+
+        function animate() {
+        requestAnimationFrame(animate);
+        controls.update();
+        renderer.render(scene, camera);
+        }
+
+        animate();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

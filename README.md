@@ -102,6 +102,6 @@ git clone https://github.com/pavankumar2812/Three.js-Showcase.git
 4. Contribute and Enjoy!
 
     * Feel free to contribute, report issues, or suggest improvements for each project.
-    * ## License 📜
+## License 📜
 
 This project is licensed under the Apache License. Feel free to explore, contribute, and enhance these projects! Let the Three.js adventures continue! 🚀👨‍💻🌟
